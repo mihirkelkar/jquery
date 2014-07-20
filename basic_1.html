@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Year with JavaScript</title>
+	<style>
+		p{ text-align: center;}
+		#year{font-weight: bold;
+			  font-size: 200%;
+			}
+	</style>
+</head>
+<body>
+	<p>When this page loads, the year will be set to the current year</p>
+	<p id = "year">2000</p>
+	<script type="text/javascript">
+		window.onload = setYear();
+		function setYear(){
+			var currentYear = new Date();
+			document.getElementById('year').innerHTML = currentYear.getFullYear();
+		}
+	</script>
+</body>
+</html>

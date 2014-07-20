@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<script type="text/javascript" src = "http://code.jquery.com/jquery-1.6.4.min.js"></script>
+		<style>
+			#grow{
+				position: absolute;
+				height: 50px;
+				text-align:center;
+				font-weight: bold;
+				font-size: 15;	
+				left: 40%;	
+				top: 80%;	
+				width: 300px;	
+				font-color: green;
+				background-color: orange;
+				border-bottom-right-radius: 5px;
+				border-top-right-radius: 5px;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+			}
+			body{
+				background-image: url("inc.jpg");
+				background-repeat:no-repeat;
+				background-position: center;
+			}
+		</style>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#grow").mouseover(function(){
+					var avoider = Math.random()
+					var number = Math.random() * 1000;
+					var second = Math.random() * 500;
+					if(number % 2 == 0){
+						number = number * -1;
+					}
+					else{
+						number += Math.random() * Math.random();
+					}
+					if(second % 2 == 0){
+						second = second * -1 + Math.random();
+					}
+					else{
+						number += Math.random() * Math.random();
+					}
+
+					$("#grow").animate({left: number, top: second}, "fast");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<center>
+			<input type = "button" id = "grow" value = "Click to know all the good UPA did"></input>
+		</center>
+	</body>
+</html>

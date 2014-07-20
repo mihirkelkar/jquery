@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Developing with Jquery mobile</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js">
+		</script>
+	</head>
+	<body>
+		<div data-role = "page" id = "fpage">
+			<div data-role = "header">
+				<h1> First Page </h1>
+			</div>
+			<div data-role = "content">
+				<p>Look at the button !</p>
+				<!-- This data-rel element set to dialog creates a dialog box, the datatheme element can be set to either a, b, c, d -->
+				<a href="#spage" data-role = "button" data-rel = "dialog">I am a button</a>
+			</div>
+		</div>
+		<div data-role = "page" id = "spage" data-theme = "a">
+			<div data-role = "header">
+				<h1> Second Page </h1>
+			</div>
+			<div data-role = "content">
+				<p>This is the second page ! </p>
+				<!-- This data-rel element set to back takes the browser one step back in history-->
+				<a href="#" data-role = "button" data-rel = "back">Back</a>
+			</div>
+		</div>
+	</body>
+</html>
